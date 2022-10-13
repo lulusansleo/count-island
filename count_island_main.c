@@ -9,7 +9,7 @@
 
 int check_format(char **world)
 {
-    int len = my_strlen(world[0]);
+    int len = my_strlen(world[1]);
 
     for (int i = 0; world[i] != NULL; i++) {
         if (len != my_strlen(world[0]))
@@ -35,20 +35,16 @@ void replace_island(vector_t size, char **world, vector_t pos, char c)
 {
     world[pos.y][pos.x] = c;
     if ((pos.x < size.x - 1) && world[pos.y][pos.x + 1] == 'X') {
-        pos.x++;
-        replace_island(size, world, pos, c);
+        replace_island(size, world, get_pos(pos.x + 1, pos.y), c);
         }
     if (pos.y < size.y - 1 && world[pos.y + 1][pos.x] == 'X') {
-        pos.y++;
-        replace_island(size, world, pos, c);
+        replace_island(size, world, get_pos(pos.x, pos.y + 1), c);
         }
     if (pos.x > 0 && world[pos.y][pos.x - 1] == 'X') {
-        pos.x--;
-        replace_island(size, world, pos, c);
+        replace_island(size, world, get_pos(pos.x - 1, pos.y), c);
         }
     if (pos.y > 0 && world[pos.y - 1][pos.x] == 'X') {
-        pos.y--;
-        replace_island(size, world, pos, c);
+        replace_island(size, world, get_pos(pos.x, pos.y - 1), c);
         }
 }
 
