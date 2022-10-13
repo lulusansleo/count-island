@@ -11,13 +11,9 @@ int check_format(char **world)
 {
     int len = my_strlen(world[1]);
 
-    for (int i = 0; world[i] != NULL; i++) {
-        if (len != my_strlen(world[0]))
+    for (int i = 0; world[i] != NULL; i++)
+        if (len != my_strlen(world[i]) || check_format(world[i]))
             return 1;
-        for(int j = 0; world[i][j] != '\0'; j++)
-            if (world[i][j] != 'X' && world[i][j] != '.')
-                return 1;
-    }
     return 0;
 }
 

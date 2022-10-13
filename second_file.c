@@ -15,7 +15,15 @@ int count_island(char **world)
         return 84;
     size = size_of_world(world);
     return actual_count(size, world);
+}
 
+int check_line(char *str)
+{
+    for (int i = 0; str[i] != '\0'; i++) {
+        if (str[i] != 'X' && str[i] != '.')
+            return 1;
+    }
+    return 0;
 }
 
 vector_t get_pos(int x, int y)
