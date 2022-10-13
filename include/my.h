@@ -23,5 +23,6 @@
     int count_and_replace(vector_t size, char **world, vector_t pos, int count);
     int actual_count(vector_t size, char **world);
     int my_strlen(char *str);
+    vector_t get_pos(int x, int y);
 
 #endif /* !myh */
