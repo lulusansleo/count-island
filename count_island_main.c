@@ -9,10 +9,12 @@
 
 int check_format(char **world)
 {
-    int len = my_strlen(world[1]);
+    if (world[0] == NULL)
+        return 1;
+    int len = my_strlen(world[0]);
 
     for (int i = 0; world[i] != NULL; i++)
-        if (len != my_strlen(world[i]) || check_format(world[i]))
+        if (len != my_strlen(world[i]) || check_line(world[i]))
             return 1;
     return 0;
 }

@@ -24,5 +24,6 @@
     int actual_count(vector_t size, char **world);
     int my_strlen(char *str);
     vector_t get_pos(int x, int y);
+    int check_line(char *str);
 
 #endif /* !myh */
