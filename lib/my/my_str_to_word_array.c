@@ -5,7 +5,7 @@
 ** only file
 */
 
-#include "../../include/my.h" 
+#include "../../include/my.h"
 
 static int is_alpha_num(char c);
 static int word_count(char const *str);
