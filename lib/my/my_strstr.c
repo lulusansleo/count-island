@@ -5,7 +5,7 @@
 ** only file
 */
 
-#include <stddef.h>
+#include "../../include/my.h"
 
 int my_strcmp2(char const *s1, char const *s2)
 {

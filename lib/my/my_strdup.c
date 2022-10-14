@@ -1,19 +1,19 @@
 /*
 ** EPITECH PROJECT, 2022
-** strcat
+** my strdup
 ** File description:
 ** only file
 */
 
 #include "../../include/my.h"
 
-char *my_strcat(char *dest, char const *src)
+char *my_strdup(char const *src)
 {
-    int a = my_strlen(dest);
+    char *dest = malloc(sizeof (char) * (my_strlen(src) + 1));
     int i;
 
     for (i = 0; src[i] != '\0'; i++)
-        dest[a + i] = src[i];
-    dest[a + i] = '\0';
+        dest[i] = src[i];
+    dest[i] = '\0';
     return dest;
 }

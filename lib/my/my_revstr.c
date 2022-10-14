@@ -5,7 +5,7 @@
 ** my rev str
 */
 
-int my_strlen(char const *str);
+#include "../../include/my.h"
 
 char *my_revstr(char *str)
 {

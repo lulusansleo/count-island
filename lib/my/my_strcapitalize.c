@@ -5,11 +5,7 @@
 ** only file
 */
 
-int my_islower(char c);
-
-int my_isupper(char c);
-
-int my_isalpha(char c);
+#include "../../include/my.h"
 
 char *my_strcapitalize(char *str)
 {

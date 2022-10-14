@@ -5,6 +5,8 @@
 ** main file
 */
 
+#include "../../include/my.h"
+
 int my_find_prime_sup(int nb)
 {
     if (nb < 0)
